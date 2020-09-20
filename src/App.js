@@ -8,17 +8,18 @@ import ShowLoading from "./components/showLoading/showLoading.component";
 class App extends Component {
   constructor(props) {
     super(props);
+    let initialData = props.missionInfo;
+    console.log(initialData);
     this.state = {
-      missionList: this.props.initialData,
+      missionList: [],
       showLoading: false,
     };
   }
 
   componentDidMount() {
-    this.setState({ showLoading: false });
-    // fetch("https://api.spacexdata.com/v3/launches?limit=100")
-    //   .then((response) => response.json())
-    //   .then((res) => this.setState({ missionList: res, showLoading: false }));
+    fetch("https://api.spacexdata.com/v3/launches?limit=100")
+      .then((response) => response.json())
+      .then((res) => this.setState({ missionList: res, showLoading: false }));
   }
 
   applyFilter = ({ selectedYear = "", landStatus, launchStatus }) => {

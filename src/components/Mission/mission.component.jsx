@@ -8,6 +8,7 @@ function Mission({
   success,
   imagePath,
   mission_id,
+  landing
 }) {
   return (
     <div className="card">
@@ -15,7 +16,6 @@ function Mission({
         <img src={imagePath} height="150px" width="150px" alt="launch_image" />
       </div>
       <h3>{`${mission_name} # ${flight_number}`}</h3>
-
       {mission_id.length > 0 && (
         <div>
           <strong>Mission Ids: </strong>
@@ -33,12 +33,12 @@ function Mission({
         {launch_year}
       </div>
       <div className="missionDetails">
-        <strong>Successful launch: </strong>
-        {launch_year}
+        <strong>Successful Launch: </strong>
+        {success !== null && success.toString()}
       </div>
       <div className="missionDetails">
-        <strong>Successful landing: </strong>
-        {success !== null && success.toString()}
+        <strong>Successful Land: </strong>
+        {landing !== null && landing.toString()}
       </div>
     </div>
   );

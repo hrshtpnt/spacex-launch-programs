@@ -14,6 +14,7 @@ function MissionList({ missionList }) {
           key={launch.flight_number}
           imagePath={launch.links.mission_patch_small}
           mission_id={launch.mission_id}
+          landing={launch.rocket.first_stage.cores[0].land_success}
         />
       ))}
     </div>
