@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans Condensed";
+  padding: 20px 60px;
+
+  background: #dfdfdf;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h4 {
+  text-align: center;
+   text-decoration: underline;
+}
+
+@media only screen and (max-width: 480px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
