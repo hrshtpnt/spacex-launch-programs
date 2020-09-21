@@ -7,9 +7,8 @@ import { renderToString } from "react-dom/server";
 import "isomorphic-fetch";
 import App from "../src/App";
 
-const PORT = 8000;
-
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use("^/$", (req, res, next) => {
   fetch("https://api.spacexdata.com/v3/launches?limit=100")
