@@ -25,6 +25,9 @@ class FilterSection extends Component {
     return (
       <div className="column left filterSection">
         <h3>Filters</h3>
+        <button type="button" onClick={() => window.location.reload(false)}>
+          Clear
+        </button>
         <h4>Launch Year</h4>
         <div className="filter">
           {years.map((year) => (
