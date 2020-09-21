@@ -1,4 +1,4 @@
-## SPACE X LAUNCHES APPLICATION
+## SPACE X LAUNCHES APPLICATION :rocket:
 
 Responsive application that would help user list and browse all launches by Spacex program.
 
