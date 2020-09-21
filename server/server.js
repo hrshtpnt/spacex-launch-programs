@@ -23,7 +23,9 @@ app.use("^/$", (req, res, next) => {
         return res.send(
           data.replace(
             '<div id="root"></div>',
-            `<div id="root">${renderToString(
+            `<script>window.__initialData__ = ${JSON.stringify(
+              initialData
+            )}</script><div id="root">${renderToString(
               <App initialData={initialData} />
             )}</div>`
           )
