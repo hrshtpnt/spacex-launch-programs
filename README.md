@@ -5,6 +5,8 @@ Responsive application that would help user list and browse all launches by Spac
 
 <img src="https://github.com/hrshtpnt/spacex-launch-programs/blob/master/src/images/spacex-launches.PNG" align="center" width="800">
 
+<img src="https://github.com/hrshtpnt/spacex-launch-programs/blob/master/src/images/spacex-launches-2.PNG" align="center" width="800">
+
 ## Available Scripts
 
 In the project directory, you can run:
